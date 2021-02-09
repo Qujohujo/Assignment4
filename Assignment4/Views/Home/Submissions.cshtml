@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "User Submissions";
+}
+
+@model IEnumerable<Submission>
+
+
+<h1>@ViewData["Title"]</h1>
+
+<ul class="list-group list-group-flush">
+    @foreach (Submission s in Model)
+    {
+        <li class="list-group-item">@s.user referred @s.name. | Favorite Dish: @s.dish | Contact: @s.phone</li>
+    }
+</ul>
+
+
+
+<br>
+<p>This is a list of all user-submitted restaurants.</p>
